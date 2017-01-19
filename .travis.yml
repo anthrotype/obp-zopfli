@@ -89,17 +89,17 @@ after_success:
         cp wheelhouse/*.whl dist;
     fi
 
-# deploy:
-#   # Deploy on tags to GitHub Releases
-#   - provider: releases
-#     api_key:
-#       secure: DjEjgnbxchBCUB2DFH0jtSee7v3vCmWXCkQrkYyULAlZkEKcLDRVRZoDg1BW/q2aCuAz8vnG4lgVbOwWhT8JTSVtbuVnT2W2chwSmBAyhtC3QVxdMQdIEVjJvU3Ci6QnBQiP9ibi4vjua8ORjWD/CoNm5v/ME0NJjeidDhPJdAg3HAvj6JnocI5alL4LTrmoDRL9ghuAw23uHFcGZ89QOF6cEs5vlD4EJ+zIMssyR3kQsY6bi96tQuo4vpfo+Gd+ygT5k5RrWkuj5Fm7A5yq0wkgxsLdbuwlFtnFl/yahG8c2bWy5iwkEcvPlsaHs9+nwR+hFzqeGDUPyNPHYTPNVyirDk+MNoXYoC08VkzUK3HNC3N/MmZxebG/aEqK0CfJopVzHdlgMQ7Tm00fYzrhazlijrRmttU5oOnuF1glUnScaR0y7zsv3oNg/4z043BbAVclcQvvVu8Fw9aNIjusYHo1MLBN+nHbZBjkIUvSlYoj7E/2kDPsIFt8E8On15a/SIrmXj1DfURnHOYeBhl059h+TTpo2aq4KAn5DnpAcwZHcxgIKdeIriCC6GCYhq3yuGNzusuCxOeEAKU8XijgST2BB2Z93OiDAPNhTJ4SjzvRYTvS15wBGviVhWmbElZlqTZFPaOP8kI+JPnYaNvzdIKBaj5EG1z3ym8XjpTkqLc=
-#     file_glob: true
-#     file: "dist/*"
-#     skip_cleanup: true
-#     on:
-#       repo: anthrotype/obp-zopfli
-#       tags: true
+deploy:
+  # Deploy on tags to GitHub Releases
+  - provider: releases
+    api_key:
+      secure: C5BF1X3MQPGNlURe+ODjsY+iDqfCEhS5+kIHW2CoEGeWis5ipBJ0lDD4myvIt5KWYl3x37wl2S7KiYhTf/O66xCaqyNH6oPCNb0/7cC+nEl1a8Ok0i5erguioD4JdUzCMgUWw5iTUQ9TQk9jr1WrJq9U/oEuVQgsTyIb7uQip9kGVMGw1epZxrE6wreYB4+zoF2uHztJRJFz+TAyDieiBZM3JYgNkGjr65iHjBgAPTg39lnGH4SgDelOspbT+aLsDZ4rpjWFzVNb3IX3puH47RNHnVyHADKET9fblBjGsV0M5Zb5Eu+ZhYnorLBhDPFLG1Qs4ISOfOEfAu/5OIhoIQg+fqklMTeTnVi21qx/1wy4lhmcJNzXFV36n52FNQD04OaQ4uD8qozYu4ORgh6bdhZr64lK48TKaBqyMBZ+Oe75OQ/hC41oXTXkVnwaPbmnpNesQfHWfYXpViD7q6YKirdWqS8a9eN8b2dspdB3iCbW7dDRzfCX6A4k6QDl3VOxfdNhQptY50kdIv3NCPkMAse4yOhxFtk27DPM7Jr2QciyasQFQ0xAIXhgSoGQWvDK4wCEa1bCL+dZ//cCTt6+62Hr6B8mlWjWSE0VRBMjWTWvhuhnLZ1Ccqg2NurqER+tllhIrjunegdY5tiWKzrhw3/Y302sbXpqIEcarUqlZVA=
+    file_glob: true
+    file: "dist/*"
+    skip_cleanup: true
+    on:
+      repo: anthrotype/obp-zopfli
+      tags: true
 #   # Deploy on tags to PyPI
 #   - provider: pypi
 #     server: https://upload.pypi.org/legacy/
